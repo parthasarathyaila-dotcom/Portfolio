@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #fafaf9;
+  --fg: #0e0e0d;
+  --muted: #78716c;
+  --line: #e7e5e4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0a0a09;
+    --fg: #fafaf9;
+    --muted: #a8a29e;
+    --line: #1c1c1b;
+  }
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #ff6b35;
+  color: #fafaf9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .container-x {
+    @apply mx-auto w-full max-w-[1240px] px-6 md:px-10;
+  }
+  .text-muted {
+    color: var(--muted);
+  }
+  .border-line {
+    border-color: var(--line);
+  }
+  .bg-line {
+    background: var(--line);
+  }
+  .hairline {
+    border-top: 1px solid var(--line);
+  }
+  .grid-bg {
+    background-image: linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 80px 80px;
+    background-position: -1px -1px;
+  }
+}
+
+.cursor-dot {
+  pointer-events: none;
+  position: fixed;
+  z-index: 50;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: var(--fg);
+  mix-blend-mode: difference;
+  transition: transform 0.15s ease-out;
+}
