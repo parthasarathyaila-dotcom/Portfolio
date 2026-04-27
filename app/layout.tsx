@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "Partha Sarathy Aila — Senior UI/UX Designer",
   description:
     "Senior UI/UX Designer based in Hyderabad. Designing thoughtful interfaces and product experiences for ambitious teams.",
-  metadataBase: new URL("https://parthasarathyaila.design"),
+  metadataBase: new URL("https://parthasarathy934@gmail.com"),
   openGraph: {
     title: "Partha Sarathy Aila — Senior UI/UX Designer",
     description:
